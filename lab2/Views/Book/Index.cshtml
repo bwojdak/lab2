@@ -1,0 +1,19 @@
+﻿@model List<Book>
+
+<h2>Książki</h2>
+<table class="table">
+    <thead>
+    <th>
+        Tytuł
+    </th>
+    <th>
+        Cena
+    </th>
+    </thead>
+    <tbody>
+    @foreach (Book book in @Model)
+    {
+        <partial model=@book name="_BookRow"></partial>
+    }
+    </tbody>
+</table>
