@@ -9,7 +9,7 @@ public class BookFormViewModel
     [Display(Name = "Tytuł")]
     public string Title { get; set; } = "";
 
-    [Required, Isbn]                          // własny atrybut – część E
+    [Required]                          // własny atrybut – część E
     public string Isbn { get; set; } = "";
 
     [DataType(DataType.Date)] [NotInFuture]   // własny atrybut – część E

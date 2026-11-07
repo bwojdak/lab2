@@ -1,0 +1,37 @@
+﻿@model List<string>
+
+<h1>Lista autorów</h1>
+
+<form asp-area="Admin"
+      asp-controller="Authors"
+      asp-action="Create"
+      method="post">
+
+    <input type="text"
+           name="name"
+           placeholder="Imię i nazwisko autora"
+           class="form-control mb-2" />
+
+    <button type="submit" class="btn btn-primary">
+        Dodaj autora
+    </button>
+</form>
+
+<table class="table table-bordered mt-3">
+    <thead>
+    <tr>
+        <th>Lp.</th>
+        <th>Autor</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        <tr>
+            <td>@(i + 1)</td>
+            <td>@Model[i]</td>
+        </tr>
+    }
+    </tbody>
+</table>
