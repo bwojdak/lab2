@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Panel Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand"
+           asp-area="Admin"
+           asp-controller="Dashboard"
+           asp-action="Index">
+            Panel Admin
+        </a>
+
+        <a class="nav-link text-white"
+           asp-area="Admin"
+           asp-controller="Authors"
+           asp-action="Index">
+            Autorzy
+        </a>
+
+        <a class="nav-link text-white"
+           asp-area=""
+           asp-controller="Book"
+           asp-action="Index">
+            Książki
+        </a>
+    </div>
+</nav>
+
+<main class="container mt-4">
+    @RenderBody()
+</main>
+
+</body>
+</html>

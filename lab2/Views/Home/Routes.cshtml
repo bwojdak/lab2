@@ -1,0 +1,23 @@
+﻿@model IEnumerable<dynamic>
+
+<h2>Trasy aplikacji</h2>
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Adres</th>
+        <th>Kontroler.Akcja</th>
+        <th>Metoda HTTP</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var route in Model)
+    {
+        <tr>
+            <td>@route.Url</td>
+            <td>@route.ControllerAction</td>
+            <td>@route.HttpMethod</td>
+        </tr>
+    }
+    </tbody>
+</table>
